@@ -15,5 +15,9 @@ app.use(
 );
 app.use(appRoutes);
 
+app.get("/", (req, res) => {
+    res.send("Hi There!");
+});
+
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => console.log(`listening on ${PORT}`));
